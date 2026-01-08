@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\textextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\textextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\xrp-10403-j0km45\\game\\game\\utils\\debug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\debug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Program.cs",
+              "RelativeDocumentMoniker": "Game\\Program.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Program.cs",
+              "RelativeToolTip": "Game\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:47:25.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vector.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Vector.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\Vector.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Vector.cs",
+              "RelativeToolTip": "Game\\Utils\\Vector.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:46:55.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Tile.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\Tile.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Tile.cs",
+              "RelativeToolTip": "Game\\Utils\\Tile.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:46:36.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TextExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\TextExtensions.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\TextExtensions.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\TextExtensions.cs",
+              "RelativeToolTip": "Game\\Utils\\TextExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:46:10.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuList.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\MenuList.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\MenuList.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\MenuList.cs",
+              "RelativeToolTip": "Game\\Utils\\MenuList.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAADwv3YAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:40:47.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Inventory.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\Inventory.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Inventory.cs",
+              "RelativeToolTip": "Game\\Utils\\Inventory.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:39:54.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IInteractable.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\IInteractable.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\IInteractable.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\IInteractable.cs",
+              "RelativeToolTip": "Game\\Utils\\IInteractable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:39:35.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Debug.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Debug.cs",
+              "RelativeDocumentMoniker": "Game\\Utils\\Debug.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\XRP-10403-J0km45\\Game\\Game\\Utils\\Debug.cs",
+              "RelativeToolTip": "Game\\Utils\\Debug.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:39:08.518Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
