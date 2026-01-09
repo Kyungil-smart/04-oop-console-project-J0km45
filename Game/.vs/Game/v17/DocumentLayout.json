@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\04-oop-console-project-j0km45\\game\\game\\gameobjects\\playercharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\game\\gameobjects\\playercharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\gameobjects\\playercharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\game\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\04-oop-console-project-j0km45\\game\\game\\scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\04-oop-console-project-j0km45\\game\\game\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\04-oop-console-project-j0km45\\game\\game\\gameobjects\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\gameobjects\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\04-oop-console-project-j0km45\\game\\game\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|c:\\users\\skykm\\documents\\github\\04-oop-console-project-j0km45\\game\\game\\gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\game\\grass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12CED66B-58C5-4ED8-84B1-93F72103D999}|Game\\Game.csproj|solutionrelative:game\\grass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Grass.cs",
+              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Grass.cs",
+              "RelativeDocumentMoniker": "Game\\Grass.cs",
+              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Grass.cs",
+              "RelativeToolTip": "Game\\Grass.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:52:48.475Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,74 +49,35 @@
               "RelativeDocumentMoniker": "Game\\GameObjects\\PlayerCharacter.cs",
               "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\GameObjects\\PlayerCharacter.cs",
               "RelativeToolTip": "Game\\GameObjects\\PlayerCharacter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAADwv4EAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T06:47:56.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TownScene.cs",
               "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Scenes\\TownScene.cs",
               "RelativeDocumentMoniker": "Game\\Scenes\\TownScene.cs",
               "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Scenes\\TownScene.cs",
               "RelativeToolTip": "Game\\Scenes\\TownScene.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAkwAsAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T05:29:59.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Tile.cs",
               "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Utils\\Tile.cs",
               "RelativeDocumentMoniker": "Game\\Utils\\Tile.cs",
               "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Utils\\Tile.cs",
               "RelativeToolTip": "Game\\Utils\\Tile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T05:35:59.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\GameObjects\\Item.cs",
-              "RelativeDocumentMoniker": "Game\\GameObjects\\Item.cs",
-              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\GameObjects\\Item.cs",
-              "RelativeToolTip": "Game\\GameObjects\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T05:24:02.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameObject.cs",
-              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\GameObjects\\GameObject.cs",
-              "RelativeDocumentMoniker": "Game\\GameObjects\\GameObject.cs",
-              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\GameObjects\\GameObject.cs",
-              "RelativeToolTip": "Game\\GameObjects\\GameObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T05:23:53.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TitleScene.cs",
-              "DocumentMoniker": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Scenes\\TitleScene.cs",
-              "RelativeDocumentMoniker": "Game\\Scenes\\TitleScene.cs",
-              "ToolTip": "C:\\Users\\skykm\\Documents\\GitHub\\04-oop-console-project-J0km45\\Game\\Game\\Scenes\\TitleScene.cs",
-              "RelativeToolTip": "Game\\Scenes\\TitleScene.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowDoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T02:43:33.575Z",
               "EditorCaption": ""
             }
           ]

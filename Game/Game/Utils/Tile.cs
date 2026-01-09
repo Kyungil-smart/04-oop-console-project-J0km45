@@ -15,8 +15,10 @@ namespace Game
         public event Action OnStepPlayer;
         // 좌표
         public Vector Position { get; set; }
-
+        // 오브젝트 존재하는지 확인
         public bool HasGameObject => OnTileObject != null;
+        // 잔디 확인
+        public bool HasGrass { get; set; }
 
         public Tile(Vector position) : this()
         {
@@ -28,12 +30,13 @@ namespace Game
             // 게임 오브젝트가 올라와있다면 해당 Symbol 출력
             if (HasGameObject)
             {
-                OnTileObject.Symbol.Print();
+                if (OnTileObject.Symbol == '/') OnTileObject.Symbol.Print(ConsoleColor.Green);
+                else OnTileObject.Symbol.Print();
             }
             // 아니면 빈칸 ' ' 출력
             else
             {
-                '/'.Print();
+                ' '.Print();
             }
         }
     }

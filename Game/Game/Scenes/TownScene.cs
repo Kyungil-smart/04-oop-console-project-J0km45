@@ -35,6 +35,9 @@ namespace Game
         {
             // 플레이어에게 맵 연결
             _player.Field = _field;
+            // 잔디 생성
+            Grass.SetGrassPosition(_field, 7, 3, 6, 3);
+
             // 플레이어 위치 설정 / 타일에 등록
             _player.Position = new Vector(4, 2);
             _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;

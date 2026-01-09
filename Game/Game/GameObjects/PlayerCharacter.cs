@@ -22,7 +22,7 @@ namespace Game
             Symbol = 'P';
             IsActiveControl = true;
             Health.AddListener(SetHealthGauge); // 체력바뀌면 SetHealthGauge 실행
-            _healthGauge = "■■■■■";
+            _healthGauge = "♥♥♥♥♥";
             _inventory = new Inventory(this); // 플레이어 자신을 owner로 넘김
         }
 
@@ -74,7 +74,6 @@ namespace Game
             // 인벤토리가 열리면 플레이어 조작 안됨
             _inventory.IsActive = !_inventory.IsActive;
             IsActiveControl = !_inventory.IsActive;
-            Debug.LogWarning($"{_inventory._itemMenu.CurrentIndex}");
         }
 
         private void Move(Vector direction)
@@ -100,8 +99,13 @@ namespace Game
                 }
             }
 
-            // 이전 위치 비우기 (null)
-            Field[Position.Y, Position.X].OnTileObject = null;
+            // 원래 위치가 잔디있던 자리가 아니라면 null
+            if (Field[Position.Y, Position.X].HasGrass)
+            {
+                Field[Position.Y, Position.X].OnTileObject = new Grass();
+            }
+            else Field[Position.Y, Position.X].OnTileObject = null;
+
             // 다음 위치를 자신으로 연결
             Field[nextPos.Y, nextPos.X].OnTileObject = this;
             Position = nextPos;
@@ -133,19 +137,19 @@ namespace Game
             switch (health)
             {
                 case 5:
-                    _healthGauge = "■■■■■";
+                    _healthGauge = "♥♥♥♥♥";
                     break;
                 case 4:
-                    _healthGauge = "■■■■□";
+                    _healthGauge = "♥♥♥♥";
                     break;
                 case 3:
-                    _healthGauge = "■■■□□";
+                    _healthGauge = "♥♥♥";
                     break;
                 case 2:
-                    _healthGauge = "■■□□□";
+                    _healthGauge = "♥♥";
                     break;
                 case 1:
-                    _healthGauge = "■□□□□";
+                    _healthGauge = "♥";
                     break;
             }
         }

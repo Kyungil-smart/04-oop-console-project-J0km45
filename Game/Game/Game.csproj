@@ -46,6 +46,7 @@
     <Compile Include="GameObjects\GameObject.cs" />
     <Compile Include="GameObjects\Item.cs" />
     <Compile Include="GameObjects\Potion.cs" />
+    <Compile Include="Grass.cs" />
     <Compile Include="Utils\ObservableProperty.cs" />
     <Compile Include="Utils\IInteractable.cs" />
     <Compile Include="Managers\GameManager.cs" />
