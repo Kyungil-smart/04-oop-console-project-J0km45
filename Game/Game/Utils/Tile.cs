@@ -33,7 +33,7 @@ namespace Game
             // 아니면 빈칸 ' ' 출력
             else
             {
-                ' '.Print();
+                '/'.Print();
             }
         }
     }

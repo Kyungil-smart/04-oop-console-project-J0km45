@@ -8,8 +8,12 @@ namespace Game
 {
     public class TownScene : Scene
     {
-        private Tile[,] _field = new Tile[10, 20];
+        private Tile[,] _field = new Tile[25, 60];
         private PlayerCharacter _player;
+
+        // 카메라 너비, 높이
+        private int camWidth = 45;
+        private int camHeight = 15;
 
         public TownScene(PlayerCharacter player) => Init(player);
 
@@ -38,7 +42,7 @@ namespace Game
             _field[3, 5].OnTileObject = new Potion() { Name = "Potion1" };
             _field[2, 15].OnTileObject = new Potion() { Name = "Potion2" };
             _field[7, 3].OnTileObject = new Potion() { Name = "Potion3" };
-            _field[9, 19].OnTileObject = new Potion() { Name = "Potion4" };
+            _field[24, 59].OnTileObject = new Potion() { Name = "Potion4" };
 
             Debug.Log("타운 씬 진입");
         }
@@ -63,11 +67,21 @@ namespace Game
 
         private void PrintField()
         {
-            for (int y = 0; y < _field.GetLength(0); y++)
+            // 카메라 왼쪽 위 좌표
+            int camX = _player.Position.X - camWidth / 2;
+            int camY = _player.Position.Y - camHeight / 2;
+
+            // 맵 범위 벗어난 인덱스 조정
+            if (camX < 0) camX = 0;  // 최소
+            if (camY < 0) camY = 0;
+            if (camX > _field.GetLength(1) - camWidth) camX = _field.GetLength(1) - camWidth;  // 최대
+            if (camY > _field.GetLength(0) - camHeight) camY = _field.GetLength(0) - camHeight;
+
+            for (int y = 0; y < camHeight; y++)
             {
-                for (int x = 0; x < _field.GetLength(1); x++)
+                for (int x = 0; x < camWidth; x++)
                 {
-                    _field[y, x].Print();
+                    _field[camY + y, camX + x].Print();
                 }
                 Console.WriteLine();
             }

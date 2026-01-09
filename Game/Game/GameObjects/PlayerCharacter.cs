@@ -9,9 +9,7 @@ namespace Game
     public class PlayerCharacter : GameObject
     {
         public ObservableProperty<int> Health = new ObservableProperty<int>(5);
-        public ObservableProperty<int> Mana = new ObservableProperty<int>(5);
         private string _healthGauge; // 체력 게이지
-        private string _manaGauge;
 
         public Tile[,] Field { get; set; } // 플레이어가 있는 맵
         private Inventory _inventory; // 플레이어 인벤토리
@@ -24,9 +22,7 @@ namespace Game
             Symbol = 'P';
             IsActiveControl = true;
             Health.AddListener(SetHealthGauge); // 체력바뀌면 SetHealthGauge 실행
-            Mana.AddListener(SetManaGauge);
             _healthGauge = "■■■■■";
-            _manaGauge = "■■■■■";
             _inventory = new Inventory(this); // 플레이어 자신을 owner로 넘김
         }
 
@@ -88,8 +84,9 @@ namespace Game
             Vector current = Position;  // 현재 위치
             Vector nextPos = Position + direction;  // 다음 위치
 
-            // 1. 맵 바깥은 아닌지?
-            // 2. 벽인지?
+            // 맵 벗어나면 이동 안함
+            if (nextPos.X < 0 || nextPos.Y < 0 || nextPos.X >= Field.GetLength(1) || nextPos.Y >= Field.GetLength(0))
+                return;
 
             // 다음 칸 오브젝트 확인
             GameObject nextTileObject = Field[nextPos.Y, nextPos.X].OnTileObject;
@@ -115,7 +112,6 @@ namespace Game
         public void Render()
         {
             DrawHealthGauge();
-            DrawManaGauge();
             _inventory.Render();
         }
 
@@ -127,41 +123,14 @@ namespace Game
 
         public void DrawHealthGauge()
         {
-            Console.SetCursorPosition(Position.X - 2, Position.Y - 2);
+            Console.SetCursorPosition(0, 0);
+            "HP ".Print(ConsoleColor.Gray);
             _healthGauge.Print(ConsoleColor.Red);
-        }
-
-        public void DrawManaGauge()
-        {
-            Console.SetCursorPosition(Position.X - 2, Position.Y - 1);
-            _healthGauge.Print(ConsoleColor.Blue);
         }
 
         public void SetHealthGauge(int health)
         {
             switch (health)
-            {
-                case 5:
-                    _healthGauge = "■■■■■";
-                    break;
-                case 4:
-                    _healthGauge = "■■■■□";
-                    break;
-                case 3:
-                    _healthGauge = "■■■□□";
-                    break;
-                case 2:
-                    _healthGauge = "■■□□□";
-                    break;
-                case 1:
-                    _healthGauge = "■□□□□";
-                    break;
-            }
-        }
-
-        public void SetManaGauge(int mana)
-        {
-            switch (mana)
             {
                 case 5:
                     _healthGauge = "■■■■■";
