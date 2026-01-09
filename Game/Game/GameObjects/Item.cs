@@ -16,11 +16,11 @@ namespace Game
         public bool InInventory { get => Inventory != null; }
         public PlayerCharacter Owner { get; set; }
 
-        public abstract void Use();
+        public abstract void Use(); // 아이템 사용 시 행동
 
         public void PrintInfo()
         {
-
+            // 아이템 설명
         }
     }
 }

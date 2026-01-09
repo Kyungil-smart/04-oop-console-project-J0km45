@@ -10,10 +10,11 @@ namespace Game
     {
         public enum LogType
         {
-            Normal,
-            Warning
+            Normal, // 일반 로그
+            Warning // 경고 로그(노란색)
         }
 
+        // 로그 저장 (타입, 출력할 텍스트)
         private static List<(LogType type, string text)> _logList = new List<(LogType type, string text)>();
 
         public static void Log(string text)
@@ -26,7 +27,7 @@ namespace Game
             _logList.Add((LogType.Warning, text));
         }
 
-        public static void Render()
+        public static void Render() // 로그 출력
         {
             foreach ((LogType type, string text) in _logList)
             {

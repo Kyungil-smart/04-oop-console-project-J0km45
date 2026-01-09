@@ -8,10 +8,10 @@ namespace Game
 {
     public class Inventory
     {
-        private List<Item> _items = new List<Item>();
-        public bool IsActive { get; set; }
-        public MenuList _itemMenu = new MenuList();
-        private PlayerCharacter _owner;
+        private List<Item> _items = new List<Item>(); // 보유 아이템 저장
+        public bool IsActive { get; set; } // 인벤토리 열림/닫힘
+        public MenuList _itemMenu = new MenuList(); // 아이템 메뉴
+        private PlayerCharacter _owner; // 인벤토리 주인
 
         public Inventory(PlayerCharacter owner)
         {
@@ -20,18 +20,21 @@ namespace Game
 
         public void Add(Item item)
         {
+            // 인벤토리 최대 10칸
             if (_items.Count >= 10) return;
 
-            _items.Add(item);
-            _itemMenu.Add(item.Name, item.Use); 
+            // 아이템 리스트에 추가
+            _items.Add(item); 
+            // 메뉴에 텍스트, 액션 등록
+            _itemMenu.Add(item.Name, item.Use);
             item.Inventory = this;
             item.Owner = _owner;
         }
 
         public void Remove(Item item)
         {
-            _items.Remove(item);
-            _itemMenu.Remove();
+            _items.Remove(item); // 리스트에서 제거
+            _itemMenu.Remove(); // 메뉴에서 제거
         }
 
         public void Render()
@@ -44,7 +47,7 @@ namespace Game
         public void Select()
         {
             if (!IsActive) return;
-
+            // 아이템의 Use() 실행
             _itemMenu.Select();
         }
 

@@ -29,8 +29,9 @@ namespace Game
 
         public override void Enter()
         {
+            // 플레이어에게 맵 연결
             _player.Field = _field;
-            // 플레이어 위치 설정
+            // 플레이어 위치 설정 / 타일에 등록
             _player.Position = new Vector(4, 2);
             _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
 
@@ -55,6 +56,7 @@ namespace Game
 
         public override void Exit()
         {
+            // 필드에 등록 해제하고 필드 참조 끊기
             _field[_player.Position.Y, _player.Position.X].OnTileObject = null;
             _player.Field = null;
         }

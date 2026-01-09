@@ -8,6 +8,7 @@ namespace Game
 {
     public interface IInteractable
     {
+        // player와 상호작용 시 실행
         void Interact(PlayerCharacter player);
     }
 }

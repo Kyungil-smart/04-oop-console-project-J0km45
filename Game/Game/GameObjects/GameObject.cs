@@ -8,7 +8,7 @@ namespace Game
 {
     public abstract class GameObject
     {
-        public char Symbol { get; set; }
-        public Vector Position { get; set; }
+        public char Symbol { get; set; }  // 문자
+        public Vector Position { get; set; }  // 위치
     }
 }

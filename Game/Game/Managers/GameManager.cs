@@ -48,6 +48,7 @@ namespace Game
             SceneManager.AddScene("Town", new TownScene(_player));
             SceneManager.AddScene("Log", new LogScene());
 
+            // 타이틀 씬부터 시작
             SceneManager.Change("Title");
 
             Debug.Log("게임 데이터 초기화 완료");

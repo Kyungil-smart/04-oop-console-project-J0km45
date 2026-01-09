@@ -10,12 +10,12 @@ namespace Game
     {
         public ObservableProperty<int> Health = new ObservableProperty<int>(5);
         public ObservableProperty<int> Mana = new ObservableProperty<int>(5);
-        private string _healthGauge;
+        private string _healthGauge; // 체력 게이지
         private string _manaGauge;
 
-        public Tile[,] Field { get; set; }
-        private Inventory _inventory;
-        public bool IsActiveControl { get; private set; }
+        public Tile[,] Field { get; set; } // 플레이어가 있는 맵
+        private Inventory _inventory; // 플레이어 인벤토리
+        public bool IsActiveControl { get; private set; } // 플레이어 조작 가능 여부
 
         public PlayerCharacter() => Init();
 
@@ -23,32 +23,32 @@ namespace Game
         {
             Symbol = 'P';
             IsActiveControl = true;
-            Health.AddListener(SetHealthGauge);
+            Health.AddListener(SetHealthGauge); // 체력바뀌면 SetHealthGauge 실행
             Mana.AddListener(SetManaGauge);
-            Health.AddListener(SetHealthGauge);
             _healthGauge = "■■■■■";
             _manaGauge = "■■■■■";
-            _inventory = new Inventory(this);
+            _inventory = new Inventory(this); // 플레이어 자신을 owner로 넘김
         }
 
         public void Update()
         {
             if(InputManager.GetKey(ConsoleKey.I))
             {
+                // 인벤토리 열기/닫기
                 HandleControl();
             }
 
             if (InputManager.GetKey(ConsoleKey.UpArrow))
             {
-                Move(Vector.Up);
-                _inventory.SelectUp();
+                Move(Vector.Up);  // 맵 이동
+                _inventory.SelectUp();  // 인벤토리 메뉴 이동
             }
                 
 
             if (InputManager.GetKey(ConsoleKey.DownArrow))
             {   
-                Move(Vector.Down);
-                _inventory.SelectDown();
+                Move(Vector.Down);  // 맵 이동
+                _inventory.SelectDown();  // 인벤토리 메뉴 이동
             }
 
             if (InputManager.GetKey(ConsoleKey.LeftArrow))
@@ -63,18 +63,19 @@ namespace Game
 
             if (InputManager.GetKey(ConsoleKey.Enter))
             {
+                // 현재 선택된 아이템의 Use() 실행
                 _inventory.Select();
             }
 
-            if (InputManager.GetKey(ConsoleKey.T))
+            if (InputManager.GetKey(ConsoleKey.T)) // 수정예정
             {
-                Health.Value--;
-                // 0이하로 안떨어지게 해주기
+                Health.Value--; // 체력 감소 
             }
         }
 
         public void HandleControl()
         {
+            // 인벤토리가 열리면 플레이어 조작 안됨
             _inventory.IsActive = !_inventory.IsActive;
             IsActiveControl = !_inventory.IsActive;
             Debug.LogWarning($"{_inventory._itemMenu.CurrentIndex}");
@@ -84,23 +85,25 @@ namespace Game
         {
             if (Field == null || !IsActiveControl) return;
 
-            Vector current = Position;
-            Vector nextPos = Position + direction;
+            Vector current = Position;  // 현재 위치
+            Vector nextPos = Position + direction;  // 다음 위치
 
             // 1. 맵 바깥은 아닌지?
             // 2. 벽인지?
 
+            // 다음 칸 오브젝트 확인
             GameObject nextTileObject = Field[nextPos.Y, nextPos.X].OnTileObject;
 
             if (nextTileObject != null)
             {
+                // 다음 칸 오브젝트가 IInteractable면 상호작용 실행
                 if (nextTileObject is IInteractable)
                 {
                     (nextTileObject as IInteractable).Interact(this);
                 }
             }
 
-            // 이전 위치 null
+            // 이전 위치 비우기 (null)
             Field[Position.Y, Position.X].OnTileObject = null;
             // 다음 위치를 자신으로 연결
             Field[nextPos.Y, nextPos.X].OnTileObject = this;
@@ -118,6 +121,7 @@ namespace Game
 
         public void AddItem(Item item)
         {
+            // 플레이어의 인벤토리에 아이템 추가
             _inventory.Add(item);
         }
 
@@ -177,7 +181,7 @@ namespace Game
             }
         }
 
-        public void Heal(int value)
+        public void Heal(int value)  // 회복
         {
             Health.Value += value;
         }

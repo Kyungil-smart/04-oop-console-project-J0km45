@@ -10,12 +10,12 @@ namespace Game
     {
         // Action -> 제네릭 델리게이트
         public static Action OnChangeScene;
-        // 현재 씬이 뭔지
+        // 현재 씬
         public static Scene Current { get; private set; }
-
+        // 이전 씬
         private static Scene _prev;
 
-        // 어떤 상태가 있는지
+        // 어떤 씬이 있는지
         private static Dictionary<string, Scene> _scenes = new Dictionary<string, Scene>();
 
         // 씬 추가
@@ -30,6 +30,7 @@ namespace Game
 
         public static void ChangePrevScene()
         {
+            // 이전 씬으로 돌아가기
             Change(_prev);
         }
 
@@ -42,6 +43,7 @@ namespace Game
             Change(_scenes[key]);
         }
 
+        // 씬 전환
         public static void Change(Scene scene)
         {
             Scene next = scene;
@@ -58,6 +60,7 @@ namespace Game
             _prev = Current;
             // 현재 상태 변경
             Current = next;
+            // InputManager.ResetKey 실행
             OnChangeScene?.Invoke();
         }
 

@@ -14,3 +14,11 @@ C:\Users\skykm\Documents\GitHub\XRP-10403-J0km45\Game\Game\obj\Debug\Game.exe.co
 C:\Users\skykm\Documents\GitHub\XRP-10403-J0km45\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\Users\skykm\Documents\GitHub\XRP-10403-J0km45\Game\Game\obj\Debug\Game.exe
 C:\Users\skykm\Documents\GitHub\XRP-10403-J0km45\Game\Game\obj\Debug\Game.pdb
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\bin\Debug\Game.exe.config
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\bin\Debug\Game.exe
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\bin\Debug\Game.pdb
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\obj\Debug\Game.exe.config
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\obj\Debug\Game.exe
+C:\Users\skykm\Documents\GitHub\04-oop-console-project-J0km45\Game\Game\obj\Debug\Game.pdb

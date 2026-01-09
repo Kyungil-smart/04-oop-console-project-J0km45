@@ -10,7 +10,7 @@ namespace Game
     {
         private static ConsoleKey _current; // 현재 입력키
 
-        private static readonly ConsoleKey[] _keys =
+        private static readonly ConsoleKey[] _keys = // 유효키 목록
         {
             ConsoleKey.UpArrow,
             ConsoleKey.DownArrow,
@@ -44,6 +44,7 @@ namespace Game
             }
         }
 
+        // 입력키 초기화
         public static void ResetKey()
         {
             _current = ConsoleKey.Clear;

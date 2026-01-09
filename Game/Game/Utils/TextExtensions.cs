@@ -31,6 +31,7 @@ namespace Game
         public static int GetTextWidth(this string text)
         {
             int width = 0;
+            // 문자열 나눠서 글자 수(콘솔 칸) 계산
             foreach (char c in text)
             {
                 width += c.GetCharacterWidth();

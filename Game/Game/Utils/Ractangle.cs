@@ -8,6 +8,7 @@ namespace Game
 {
     public struct Ractangle
     {
+        // X,Y -> 테두리의 왼쪽 위 좌표
         public int X;
         public int Y;
         public int Width;
@@ -15,6 +16,7 @@ namespace Game
 
         public Ractangle(int x = 0, int y = 0, int width = 2, int height = 2)
         {
+            // 전달받은 값 저장
             X = x;
             Y = y;
             Width = width;
@@ -23,6 +25,7 @@ namespace Game
 
         public void Draw()
         {
+            // 테두리 최소 길이 = 2
             if (Width < 2 || Height < 2) return;
 
             int bw = Console.BufferWidth;

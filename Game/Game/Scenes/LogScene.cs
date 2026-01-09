@@ -12,12 +12,14 @@ namespace Game
         {
             if (InputManager.GetKey(ConsoleKey.Enter))
             {
+                // 이전 씬으로 돌아가기
                 SceneManager.ChangePrevScene();
             }
         }
 
         public override void Render()
         {
+            // 로그 출력
             Debug.Render();
         }
 
