@@ -15,15 +15,16 @@ namespace Game
 
         public override void Update()
         {
-
+            if (InputManager.GetKey(ConsoleKey.Enter))
+            {
+                SceneManager.Change("Town");
+            }
         }
 
         public override void Render()
         {
-            //if (InputManager.GetKey(ConsoleKey.Enter))
-            //{
-            //    Console.WriteLine("엔터");
-            //}
+            Console.SetCursorPosition(10, 0);
+            "Story Scene".Print();
         }
 
         public override void Exit()

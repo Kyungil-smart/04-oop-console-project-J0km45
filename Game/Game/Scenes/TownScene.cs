@@ -10,7 +10,7 @@ namespace Game
     {
         private Tile[,] _field = new Tile[25, 60];
         private PlayerCharacter _player;
-
+        private bool _isSetItem;
         // 카메라 너비, 높이
         private int camWidth = 45;
         private int camHeight = 15;
@@ -38,15 +38,20 @@ namespace Game
             // 잔디 생성
             Grass.SetGrassPosition(_field, 7, 3, 6, 3);
 
+            if(!_isSetItem)
+            {
+                _field[7, 21].OnTileObject = new Gold();
+                _field[3, 5].OnTileObject = new Potion() { Name = "Potion1" };
+                _field[2, 15].OnTileObject = new Potion() { Name = "Potion2" };
+                _field[7, 3].OnTileObject = new Potion() { Name = "Potion3" };
+                _field[24, 59].OnTileObject = new Potion() { Name = "Potion4" };
+
+                _isSetItem = true;
+            }
+            _field[10, 10].OnTileObject = new Dungeon();
             // 플레이어 위치 설정 / 타일에 등록
             _player.Position = new Vector(4, 2);
             _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
-
-            _field[7, 21].OnTileObject = new Gold();
-            _field[3, 5].OnTileObject = new Potion() { Name = "Potion1" };
-            _field[2, 15].OnTileObject = new Potion() { Name = "Potion2" };
-            _field[7, 3].OnTileObject = new Potion() { Name = "Potion3" };
-            _field[24, 59].OnTileObject = new Potion() { Name = "Potion4" };
 
             Debug.Log("타운 씬 진입");
         }
@@ -64,9 +69,9 @@ namespace Game
 
         public override void Exit()
         {
-            // 필드에 등록 해제하고 필드 참조 끊기
+            // 필드에 등록 해제
             _field[_player.Position.Y, _player.Position.X].OnTileObject = null;
-            _player.Field = null;
+            //_player.Field = null;
         }
 
         private void PrintField()
