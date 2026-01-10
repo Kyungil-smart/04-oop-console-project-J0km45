@@ -42,6 +42,7 @@ namespace Game
             _player.Position = new Vector(4, 2);
             _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
 
+            _field[7, 21].OnTileObject = new Gold();
             _field[3, 5].OnTileObject = new Potion() { Name = "Potion1" };
             _field[2, 15].OnTileObject = new Potion() { Name = "Potion2" };
             _field[7, 3].OnTileObject = new Potion() { Name = "Potion3" };

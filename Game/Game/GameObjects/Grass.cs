@@ -9,7 +9,7 @@ namespace Game
     public class Grass : GameObject
     {
         public Grass() => Init();
-        public void Init()
+        private void Init()
         {
             Symbol = '/';
         }

@@ -8,8 +8,10 @@ namespace Game
 {
     public class PlayerCharacter : GameObject
     {
-        public ObservableProperty<int> Health = new ObservableProperty<int>(5);
+        public ObservableProperty<int> Health = new ObservableProperty<int>(5); // 체력
+        public ObservableProperty<int> Gold = new ObservableProperty<int>(10);  // 골드
         private string _healthGauge; // 체력 게이지
+        private string _goldText;
 
         public Tile[,] Field { get; set; } // 플레이어가 있는 맵
         private Inventory _inventory; // 플레이어 인벤토리
@@ -22,7 +24,9 @@ namespace Game
             Symbol = 'P';
             IsActiveControl = true;
             Health.AddListener(SetHealthGauge); // 체력바뀌면 SetHealthGauge 실행
+            Gold.AddListener(SetGoldText); // 골드바뀌면 SetGoldText 실행
             _healthGauge = "♥♥♥♥♥";
+            _goldText = "10G";
             _inventory = new Inventory(this); // 플레이어 자신을 owner로 넘김
         }
 
@@ -116,6 +120,7 @@ namespace Game
         public void Render()
         {
             DrawHealthGauge();
+            DrawGoldText();
             _inventory.Render();
         }
 
@@ -130,6 +135,12 @@ namespace Game
             Console.SetCursorPosition(0, 0);
             "HP ".Print(ConsoleColor.Gray);
             _healthGauge.Print(ConsoleColor.Red);
+        }
+
+        public void DrawGoldText()
+        {
+            Console.SetCursorPosition(0, 1);
+            _goldText.Print(ConsoleColor.Yellow);
         }
 
         public void SetHealthGauge(int health)
@@ -154,9 +165,19 @@ namespace Game
             }
         }
 
+        public void SetGoldText(int gold)
+        {
+            _goldText = $"{gold}G";
+        }
+
         public void Heal(int value)  // 회복
         {
             Health.Value += value;
+        }
+
+        public void AddGold(int gold)
+        {
+            Gold.Value += gold;
         }
     }
 }
