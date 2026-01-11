@@ -8,7 +8,7 @@ namespace Game
 {
     public class Gold : GameObject, IInteractable
     {
-        public int amount { get; set; } = 1;
+        public int Amount { get; set; } = 1;
 
         public Gold() => Init();
 
@@ -19,7 +19,7 @@ namespace Game
 
         public void Interact(PlayerCharacter player)
         {
-            player.AddGold(amount);
+            player.AddGold(Amount);
         }
     }
 }

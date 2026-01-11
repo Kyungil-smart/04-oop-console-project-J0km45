@@ -43,12 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils\Battle.cs" />
+    <Compile Include="Utils\BattleAction.cs" />
     <Compile Include="GameObjects\Dungeon.cs" />
     <Compile Include="GameObjects\GameObject.cs" />
     <Compile Include="GameObjects\Item.cs" />
     <Compile Include="GameObjects\Potion.cs" />
     <Compile Include="GameObjects\Grass.cs" />
     <Compile Include="GameObjects\Gold.cs" />
+    <Compile Include="Monster\Goblin.cs" />
+    <Compile Include="Monster\Golem.cs" />
+    <Compile Include="Monster\Monster.cs" />
+    <Compile Include="Monster\Slime.cs" />
     <Compile Include="Utils\ObservableProperty.cs" />
     <Compile Include="Utils\IInteractable.cs" />
     <Compile Include="Managers\GameManager.cs" />

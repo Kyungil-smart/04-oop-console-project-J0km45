@@ -10,10 +10,10 @@ namespace Game
     {
         private Tile[,] _field = new Tile[25, 60];
         private PlayerCharacter _player;
-        private bool _isSetItem;
+        private bool isSetItem;
         // 카메라 너비, 높이
-        private int camWidth = 45;
-        private int camHeight = 15;
+        private int _camWidth = 45;
+        private int _camHeight = 15;
 
         public TownScene(PlayerCharacter player) => Init(player);
 
@@ -38,7 +38,7 @@ namespace Game
             // 잔디 생성
             Grass.SetGrassPosition(_field, 7, 3, 6, 3);
 
-            if(!_isSetItem)
+            if(!isSetItem)
             {
                 _field[7, 21].OnTileObject = new Gold();
                 _field[3, 5].OnTileObject = new Potion() { Name = "Potion1" };
@@ -46,9 +46,11 @@ namespace Game
                 _field[7, 3].OnTileObject = new Potion() { Name = "Potion3" };
                 _field[24, 59].OnTileObject = new Potion() { Name = "Potion4" };
 
-                _isSetItem = true;
+                isSetItem = true;
             }
-            _field[10, 10].OnTileObject = new Dungeon();
+
+            _field[2, 7].OnTileObject = new Dungeon(); // 던전
+
             // 플레이어 위치 설정 / 타일에 등록
             _player.Position = new Vector(4, 2);
             _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
@@ -77,18 +79,18 @@ namespace Game
         private void PrintField()
         {
             // 카메라 왼쪽 위 좌표
-            int camX = _player.Position.X - camWidth / 2;
-            int camY = _player.Position.Y - camHeight / 2;
+            int camX = _player.Position.X - _camWidth / 2;
+            int camY = _player.Position.Y - _camHeight / 2;
 
             // 맵 범위 벗어난 인덱스 조정
             if (camX < 0) camX = 0;  // 최소
             if (camY < 0) camY = 0;
-            if (camX > _field.GetLength(1) - camWidth) camX = _field.GetLength(1) - camWidth;  // 최대
-            if (camY > _field.GetLength(0) - camHeight) camY = _field.GetLength(0) - camHeight;
+            if (camX > _field.GetLength(1) - _camWidth) camX = _field.GetLength(1) - _camWidth;  // 최대
+            if (camY > _field.GetLength(0) - _camHeight) camY = _field.GetLength(0) - _camHeight;
 
-            for (int y = 0; y < camHeight; y++)
+            for (int y = 0; y < _camHeight; y++)
             {
-                for (int x = 0; x < camWidth; x++)
+                for (int x = 0; x < _camWidth; x++)
                 {
                     _field[camY + y, camX + x].Print();
                 }

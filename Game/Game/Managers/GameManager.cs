@@ -19,8 +19,9 @@ namespace Game
             // 게임 루틴 가동
             while (!IsGameOver)
             {
+                // 출력화면 초기화
+                Console.Clear();  
                 // 렌더링
-                Console.Clear();  // 출력화면 초기화
                 SceneManager.Render();
                 // 키입력 받기
                 InputManager.GetUserInput();
@@ -44,7 +45,7 @@ namespace Game
             _player = new PlayerCharacter();
 
             SceneManager.AddScene("Title", new TitleScene());
-            SceneManager.AddScene("Story", new StoryScene());
+            SceneManager.AddScene("Story", new StoryScene(_player));
             SceneManager.AddScene("Town", new TownScene(_player));
             SceneManager.AddScene("Log", new LogScene());
 
