@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreditScene.cs" />
+    <Compile Include="GameOverScene.cs" />
     <Compile Include="Utils\Battle.cs" />
     <Compile Include="Utils\BattleAction.cs" />
     <Compile Include="GameObjects\Dungeon.cs" />

@@ -45,8 +45,10 @@ namespace Game
             _player = new PlayerCharacter();
 
             SceneManager.AddScene("Title", new TitleScene());
-            SceneManager.AddScene("Story", new StoryScene(_player));
+            SceneManager.AddScene("Credit", new CreditScene());
             SceneManager.AddScene("Town", new TownScene(_player));
+            SceneManager.AddScene("Story", new StoryScene(_player));
+            SceneManager.AddScene("GameOver", new GameOverScene(_player));
             SceneManager.AddScene("Log", new LogScene());
 
             // 타이틀 씬부터 시작

@@ -47,7 +47,7 @@ namespace Game
 
         public override void Render()
         {
-            Console.SetCursorPosition(5, 1);
+            Console.SetCursorPosition(10, 2);
             GameManager.GameName.Print(ConsoleColor.Yellow);
 
             _titleMenu.Render(8, 5);
@@ -70,7 +70,7 @@ namespace Game
 
         public void ViewCredits()
         {
-            // 크레딧 메소드
+            SceneManager.Change("Credit");
         }
     }
 }

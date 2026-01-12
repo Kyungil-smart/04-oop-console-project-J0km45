@@ -25,9 +25,9 @@ namespace Game
         public override void Enter()
         {
             int percent = rand.Next(0, 100);
-            if (percent < 50) _battle = new Battle(15, new Slime());
-            else if (percent < 80) _battle = new Battle(15, new Goblin());
-            else _battle = new Battle(15, new Golem());
+            if (percent < 50) _battle = new Battle(15, new Slime()); // 50%
+            else if (percent < 80) _battle = new Battle(15, new Goblin()); // 30%
+            else _battle = new Battle(15, new Golem()); // 20%
 
             _turnFinish = false;
             SetActionMenu();
@@ -35,12 +35,23 @@ namespace Game
 
         public override void Update()
         {
-            // 전투 종료 시 Enter누르면 Town으로 이동
+            // 전투 종료 시 Enter누르면 이동
             if (_battle.IsFinish)
             {
                 if (InputManager.GetKey(ConsoleKey.Enter))
                 {
-                    SceneManager.Change("Town");
+                    if (_battle.Monster.HP == 0 && _battle.PlayerHP > 0) // 승리
+                    {
+                        _player.AddGold(5); // +5 Gold
+                        SceneManager.Change("Town");
+                    }
+                    else if (_battle.PlayerHP == 0 && _battle.Monster.HP > 0) // 패배
+                    {
+                        _player.Health.Value--; // -1 Health
+                        if (_player.Health.Value > 0) SceneManager.Change("Town");
+                        else SceneManager.Change("GameOver");
+                    }
+                    else SceneManager.Change("Town"); // 무승부
                 }
                 return;
             }
@@ -97,7 +108,23 @@ namespace Game
                 if (_battle.IsFinish)
                 {
                     Console.WriteLine("전투가 종료되었습니다.");
-                    Console.WriteLine("Enter를 누르면 Town으로 돌아갑니다.");
+                    if (_battle.Monster.HP == 0 && _battle.PlayerHP > 0)  // 승리
+                    {
+                        Console.WriteLine("승리! Enter를 누르면 5 Gold를 받고 Town으로 돌아갑니다.");
+                    }
+                    else if (_battle.PlayerHP == 0 && _battle.Monster.HP > 0)  // 패배
+                    {
+                        if (_player.Health.Value - 1 > 0)
+                        {
+                            Console.WriteLine("패배.. Enter를 누르면 체력이 1 감소하고 Town으로 돌아갑니다.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("패배.. 체력이 0이 되었습니다");
+                            Console.WriteLine("Enter를 누르면 종료 화면으로 이동합니다.");
+                        }
+                    }
+                    else Console.WriteLine("무승부. Enter를 누르면 Town으로 돌아갑니다.");  // 무승부
                 }
                 else
                 {
