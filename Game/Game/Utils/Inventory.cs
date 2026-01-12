@@ -41,7 +41,7 @@ namespace Game
         {
             if (!IsActive) return;
 
-            _itemMenu.Render(15, 1);
+            _itemMenu.Render(15, 2);
         }
 
         public void Select()

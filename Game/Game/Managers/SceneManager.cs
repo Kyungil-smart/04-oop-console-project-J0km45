@@ -64,6 +64,12 @@ namespace Game
             OnChangeScene?.Invoke();
         }
 
+        // 씬 재설정
+        public static void ResetScene(string key, Scene scene)
+        {
+            _scenes[key] = scene;
+        }
+
         public static void Update()
         {
             // 현재 씬이 null이 아니면 해당 씬의 Update호출

@@ -10,7 +10,6 @@ namespace Game
     {
         public Slime() : base("슬라임", 10, 3)
         {
-
         }
 
         public override void Skill()

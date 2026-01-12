@@ -87,12 +87,15 @@ namespace Game
             Vector current = Position;  // 현재 위치
             Vector nextPos = Position + direction;  // 다음 위치
 
-            // 맵 벗어나면 이동 안함
+            // 맵 벗어나면 이동 안 함
             if (nextPos.X < 0 || nextPos.Y < 0 || nextPos.X >= Field.GetLength(1) || nextPos.Y >= Field.GetLength(0))
                 return;
 
             // 다음 칸 오브젝트 확인
             GameObject nextTileObject = Field[nextPos.Y, nextPos.X].OnTileObject;
+
+            // 다음 칸이 벽이면 이동 안 함 
+            if (nextTileObject is Wall) return;
 
             if (nextTileObject != null)
             {
@@ -132,15 +135,15 @@ namespace Game
 
         public void DrawHealthGauge()
         {
-            Console.SetCursorPosition(0, 0);
             "HP ".Print(ConsoleColor.Gray);
             _healthGauge.Print(ConsoleColor.Red);
+            Console.WriteLine();
         }
 
         public void DrawGoldText()
         {
-            Console.SetCursorPosition(0, 1);
             _goldText.Print(ConsoleColor.Yellow);
+            Console.WriteLine();
         }
 
         public void SetHealthGauge(int health)
@@ -172,6 +175,7 @@ namespace Game
 
         public void Heal(int value)  // 회복
         {
+            if (Health.Value >= 5) return; 
             Health.Value += value;
         }
 

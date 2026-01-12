@@ -10,7 +10,6 @@ namespace Game
     {
         public Golem() : base("골렘", 15, 5)
         {
-            
         }
 
         public override void Skill()

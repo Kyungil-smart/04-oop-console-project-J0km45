@@ -10,7 +10,6 @@ namespace Game
     {
         public Goblin() : base("고블린", 12, 4)
         {
-           
         }
 
         public override void Skill()

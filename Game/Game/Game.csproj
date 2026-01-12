@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreditScene.cs" />
-    <Compile Include="GameOverScene.cs" />
+    <Compile Include="Scenes\CreditScene.cs" />
+    <Compile Include="Scenes\GameOverScene.cs" />
     <Compile Include="Utils\Battle.cs" />
     <Compile Include="Utils\BattleAction.cs" />
     <Compile Include="GameObjects\Dungeon.cs" />
@@ -77,6 +77,7 @@
     <Compile Include="Scenes\Scene.cs" />
     <Compile Include="Managers\SceneManager.cs" />
     <Compile Include="Utils\Vector.cs" />
+    <Compile Include="Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

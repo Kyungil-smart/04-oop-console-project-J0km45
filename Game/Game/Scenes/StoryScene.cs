@@ -147,6 +147,7 @@ namespace Game
             _battleMenu.Add($"스킬 (남은 횟수: {_battle.PlayerSkillCount})", Skill);
             _battleMenu.Add($"방어 (남은 횟수: {_battle.PlayerGuardCount})", Guard);
 
+            // _currentIndex 초기화
             _battleMenu.Reset();
         }
 

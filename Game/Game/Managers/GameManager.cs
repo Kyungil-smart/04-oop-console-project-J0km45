@@ -48,13 +48,25 @@ namespace Game
             SceneManager.AddScene("Credit", new CreditScene());
             SceneManager.AddScene("Town", new TownScene(_player));
             SceneManager.AddScene("Story", new StoryScene(_player));
-            SceneManager.AddScene("GameOver", new GameOverScene(_player));
+            SceneManager.AddScene("GameOver", new GameOverScene(_player, this));
             SceneManager.AddScene("Log", new LogScene());
 
             // 타이틀 씬부터 시작
             SceneManager.Change("Title");
 
             Debug.Log("게임 데이터 초기화 완료");
+        }
+
+        // 게임 재시작
+        public void RestartGame()
+        {
+            _player = new PlayerCharacter();
+
+            SceneManager.ResetScene("Town", new TownScene(_player));
+            SceneManager.ResetScene("Story", new StoryScene(_player));
+            SceneManager.ResetScene("GameOver", new GameOverScene(_player, this));
+
+            SceneManager.Change("Title");
         }
     }
 }

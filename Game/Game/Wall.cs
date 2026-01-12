@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class Grass : GameObject
+    public class Wall : GameObject
     {
-        public Grass() => Init();
+        public Wall() => Init();
 
         private void Init()
         {
-            Symbol = '/';
-        }  
+            Symbol = '#';
+        }
     }
 }

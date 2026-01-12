@@ -30,8 +30,30 @@ namespace Game
             // 게임 오브젝트가 올라와있다면 해당 Symbol 출력
             if (HasGameObject)
             {
-                if (OnTileObject.Symbol == '/') OnTileObject.Symbol.Print(ConsoleColor.Green);
-                else OnTileObject.Symbol.Print();
+                switch(OnTileObject.Symbol)
+                {
+                    case 'P':  // Grass
+                        OnTileObject.Symbol.Print(ConsoleColor.White);
+                        break;
+                    case '/':  // Grass
+                        OnTileObject.Symbol.Print(ConsoleColor.DarkGreen);
+                        break;
+                    case '#':  // Wall
+                        OnTileObject.Symbol.Print(ConsoleColor.DarkGray);
+                        break;
+                    case 'I':  // Potion
+                        OnTileObject.Symbol.Print(ConsoleColor.Magenta);
+                        break;
+                    case 'G':  // Gold
+                        OnTileObject.Symbol.Print(ConsoleColor.Yellow);
+                        break;
+                    case 'D':  // Dungeon
+                        OnTileObject.Symbol.Print(ConsoleColor.DarkRed);
+                        break;
+                    default:
+                        OnTileObject.Symbol.Print();
+                        break;
+                }
             }
             // 아니면 빈칸 ' ' 출력
             else

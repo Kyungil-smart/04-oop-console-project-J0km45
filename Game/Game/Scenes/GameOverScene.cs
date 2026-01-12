@@ -9,13 +9,16 @@ namespace Game
     public class GameOverScene : Scene
     {
         private PlayerCharacter _player;
+        private GameManager _gm;
 
-        public GameOverScene(PlayerCharacter player) => Init(player);
+        public GameOverScene(PlayerCharacter player, GameManager gm) => Init(player, gm);
 
-        public void Init(PlayerCharacter player)
+        public void Init(PlayerCharacter player, GameManager gm)
         {
             _player = player;
+            _gm = gm;
         }
+
         public override void Enter()
         {
             
@@ -25,7 +28,7 @@ namespace Game
         {
             if (InputManager.GetKey(ConsoleKey.Enter))
             {
-                GameManager.IsGameOver = true;
+                _gm.RestartGame(); // 재시작
             }
         }
 
@@ -34,8 +37,8 @@ namespace Game
             Console.SetCursorPosition(10, 3);
             Console.WriteLine("GAME OVER");
             Console.SetCursorPosition(8, 6);
-            $"획득 골드: {_player.Gold.Value}G".Print(ConsoleColor.Yellow);
-
+            $"획득 골드: ".Print();
+            $"{_player.Gold.Value}G".Print(ConsoleColor.Yellow);
         }
 
         public override void Exit()
