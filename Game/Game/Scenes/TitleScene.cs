@@ -47,10 +47,10 @@ namespace Game
 
         public override void Render()
         {
-            Console.SetCursorPosition(10, 2);
+            Console.SetCursorPosition(22, 3);
             GameManager.GameName.Print(ConsoleColor.Yellow);
 
-            _titleMenu.Render(8, 5);
+            _titleMenu.Render(21, 6);
         }
 
         public override void Exit()

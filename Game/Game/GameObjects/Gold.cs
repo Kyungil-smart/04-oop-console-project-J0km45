@@ -14,7 +14,7 @@ namespace Game
 
         private void Init()
         {
-            Symbol = 'G';
+            Symbol = '◎';
         }
 
         public void Interact(PlayerCharacter player)

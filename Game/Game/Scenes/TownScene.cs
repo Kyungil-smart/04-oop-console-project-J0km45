@@ -12,8 +12,8 @@ namespace Game
         private PlayerCharacter _player;
         private bool _isSetItem; // 아이템 1번만 설치됨
         // 카메라 너비, 높이
-        public int CamWidth { get; private set; } = 45;
-        public int CamHeight { get; private set; } = 15;
+        public int _camWidth = 30;
+        public int _camHeight = 15;
 
         public TownScene(PlayerCharacter player) => Init(player);
 
@@ -29,33 +29,35 @@ namespace Game
                     _field[y, x] = new Tile(pos);
                 }
             }
+
             // 벽 생성
             SetWalls();
             // 잔디 생성
-            SetGrassPosition(7, 3, 6, 3);
+            SetGrassPosition(6, 4, 20, 6);
+            SetGrassPosition(34, 4, 20, 6);
+            SetGrassPosition(6, 15, 20, 6);
+            SetGrassPosition(34, 15, 20, 6);
         }
 
         public override void Enter()
         {
             // 플레이어에게 맵 연결
             _player.Field = _field;
-            
 
             if(!_isSetItem)
             {
-                _field[7, 21].OnTileObject = new Gold();
-                _field[3, 5].OnTileObject = new Potion() { Name = "Potion 1" };
-                _field[2, 15].OnTileObject = new Potion() { Name = "Potion 2" };
-                _field[7, 3].OnTileObject = new Potion() { Name = "Potion3" };
-                _field[23, 58].OnTileObject = new Potion() { Name = "Potion4" };
+                _field[19, 9].OnTileObject = new Gold();
+                _field[2, 40].OnTileObject = new Gold();
+                _field[1, 1].OnTileObject = new Potion() { Name = "Potion" };
+                _field[18, 46].OnTileObject = new Potion() { Name = "Potion" };
 
                 _isSetItem = true;
             }
 
-            _field[2, 7].OnTileObject = new Dungeon(); // 던전
+            _field[12, 56].OnTileObject = new Dungeon(); // 던전
 
             // 플레이어 위치 설정 / 타일에 등록
-            _player.Position = new Vector(4, 2);
+            _player.Position = new Vector(30, 12);
             _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
 
             Debug.Log("타운 씬 진입");
@@ -69,7 +71,6 @@ namespace Game
         public override void Render()
         {
             PrintField();
-            Console.WriteLine();
             _player.Render();
         }
 
@@ -83,18 +84,18 @@ namespace Game
         private void PrintField()
         {
             // 카메라 왼쪽 위 좌표
-            int camX = _player.Position.X - CamWidth / 2;
-            int camY = _player.Position.Y - CamHeight / 2;
+            int camX = _player.Position.X - _camWidth / 2;
+            int camY = _player.Position.Y - _camHeight / 2;
 
             // 맵 범위 벗어난 인덱스 조정
             if (camX < 0) camX = 0;  // 최소
             if (camY < 0) camY = 0;
-            if (camX > _field.GetLength(1) - CamWidth) camX = _field.GetLength(1) - CamWidth;  // 최대
-            if (camY > _field.GetLength(0) - CamHeight) camY = _field.GetLength(0) - CamHeight;
+            if (camX > _field.GetLength(1) - _camWidth) camX = _field.GetLength(1) - _camWidth;  // 최대
+            if (camY > _field.GetLength(0) - _camHeight) camY = _field.GetLength(0) - _camHeight;
 
-            for (int y = 0; y < CamHeight; y++)
+            for (int y = 0; y < _camHeight; y++)
             {
-                for (int x = 0; x < CamWidth; x++)
+                for (int x = 0; x < _camWidth; x++)
                 {
                     _field[camY + y, camX + x].Print();
                 }

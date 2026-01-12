@@ -34,11 +34,13 @@ namespace Game
 
         public override void Render()
         {
-            Console.SetCursorPosition(10, 3);
+            Console.SetCursorPosition(23, 3);
             Console.WriteLine("GAME OVER");
-            Console.SetCursorPosition(8, 6);
+            Console.SetCursorPosition(21, 7);
             $"획득 골드: ".Print();
             $"{_player.Gold.Value}G".Print(ConsoleColor.Yellow);
+            Console.SetCursorPosition(22, 10);
+            "Press Enter".Print(ConsoleColor.DarkGray);
         }
 
         public override void Exit()

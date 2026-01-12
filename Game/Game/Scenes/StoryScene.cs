@@ -85,8 +85,25 @@ namespace Game
 
         public override void Render()
         {
-            Console.WriteLine($"플레이어 HP : {_battle.PlayerHP} / {_battle.PlayerMaxHP}");
-            Console.WriteLine($"{_battle.Monster.Name} HP : {_battle.Monster.HP} / {_battle.Monster.MaxHP}\n");
+            // 플레이어 체력
+            "플레이어 ".Print();
+            for (int i = 0; i < _battle.PlayerMaxHP; i++)
+            {
+                if (i < _battle.PlayerHP) "■".Print(ConsoleColor.Green);
+                else "□".Print(ConsoleColor.Green);
+            }
+            $" {_battle.PlayerHP} / {_battle.PlayerMaxHP}".Print();
+            Console.WriteLine();
+
+            // 몬스터 체력
+            $"{_battle.Monster.Name} ".Print();
+            for (int i = 0; i < _battle.Monster.MaxHP; i++)
+            {
+                if (i < _battle.Monster.HP) "■".Print(ConsoleColor.Red);
+                else "□".Print(ConsoleColor.Red);
+            }
+            $" {_battle.Monster.HP} / {_battle.Monster.MaxHP}\n".Print();
+            Console.WriteLine();
 
             if (!_turnFinish)
             {
@@ -96,7 +113,7 @@ namespace Game
                 _battleMenu.Render(0, 5);
 
                 Console.SetCursorPosition(0, 12);
-                Console.WriteLine("행동을 선택하세요");
+                Console.WriteLine("행동을 선택하세요.");
             }
             else
             {
@@ -107,28 +124,35 @@ namespace Game
 
                 if (_battle.IsFinish)
                 {
-                    Console.WriteLine("전투가 종료되었습니다.");
+                    Console.WriteLine("\n전투가 종료되었습니다.\n");
                     if (_battle.Monster.HP == 0 && _battle.PlayerHP > 0)  // 승리
                     {
-                        Console.WriteLine("승리! Enter를 누르면 5 Gold를 받고 Town으로 돌아갑니다.");
+                        "승리! ".Print(ConsoleColor.Cyan);
+                        Console.WriteLine("Enter를 누르면 5 Gold를 받고 마을로 돌아갑니다.");
                     }
                     else if (_battle.PlayerHP == 0 && _battle.Monster.HP > 0)  // 패배
                     {
                         if (_player.Health.Value - 1 > 0)
                         {
-                            Console.WriteLine("패배.. Enter를 누르면 체력이 1 감소하고 Town으로 돌아갑니다.");
+                            "패배.. ".Print(ConsoleColor.Red);
+                            Console.WriteLine("Enter를 누르면 체력이 1 감소하고 마을로 돌아갑니다.");
                         }
-                        else
+                        else  // 게임 종료
                         {
-                            Console.WriteLine("패배.. 체력이 0이 되었습니다");
+                            "패배.. ".Print(ConsoleColor.Red);
+                            Console.WriteLine("체력이 0이 되었습니다.");
                             Console.WriteLine("Enter를 누르면 종료 화면으로 이동합니다.");
                         }
                     }
-                    else Console.WriteLine("무승부. Enter를 누르면 Town으로 돌아갑니다.");  // 무승부
+                    else  // 무승부
+                    {
+                        "무승부. ".Print(ConsoleColor.White);
+                        Console.WriteLine("Enter를 누르면 마을로 돌아갑니다.");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Enter를 누르면 다음 턴을 진행합니다.");
+                    Console.WriteLine("\nEnter를 누르면 다음 턴을 진행합니다.");
                 }
             }
         }
@@ -184,7 +208,7 @@ namespace Game
             {
                 Console.WriteLine("플레이어가 강타를 사용했습니다. (3 Damage)");
             }
-            else Console.WriteLine("플레이어가 방어했습니다");
+            else Console.WriteLine("플레이어가 방어했습니다.");
         }
 
         // 몬스터 행동 출력

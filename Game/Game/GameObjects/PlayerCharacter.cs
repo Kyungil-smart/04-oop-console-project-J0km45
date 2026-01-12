@@ -9,7 +9,7 @@ namespace Game
     public class PlayerCharacter : GameObject
     {
         public ObservableProperty<int> Health = new ObservableProperty<int>(5); // 체력
-        public ObservableProperty<int> Gold = new ObservableProperty<int>(10);  // 골드
+        public ObservableProperty<int> Gold = new ObservableProperty<int>(0);  // 골드
         private string _healthGauge; // 체력 게이지
         private string _goldText;
 
@@ -26,7 +26,7 @@ namespace Game
             Health.AddListener(SetHealthGauge); // 체력바뀌면 SetHealthGauge 실행
             Gold.AddListener(SetGoldText); // 골드바뀌면 SetGoldText 실행
             _healthGauge = "♥♥♥♥♥";
-            _goldText = "10G";
+            _goldText = "0G";
             _inventory = new Inventory(this); // 플레이어 자신을 owner로 넘김
         }
 
@@ -135,15 +135,15 @@ namespace Game
 
         public void DrawHealthGauge()
         {
+            Console.SetCursorPosition(33, 1);
             "HP ".Print(ConsoleColor.Gray);
             _healthGauge.Print(ConsoleColor.Red);
-            Console.WriteLine();
         }
 
         public void DrawGoldText()
         {
+            Console.SetCursorPosition(33, 2);
             _goldText.Print(ConsoleColor.Yellow);
-            Console.WriteLine();
         }
 
         public void SetHealthGauge(int health)

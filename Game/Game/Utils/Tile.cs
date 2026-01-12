@@ -32,23 +32,23 @@ namespace Game
             {
                 switch(OnTileObject.Symbol)
                 {
-                    case 'P':  // Grass
+                    case 'P':  // Player
                         OnTileObject.Symbol.Print(ConsoleColor.White);
                         break;
-                    case '/':  // Grass
+                    case 'γ':  // Grass
                         OnTileObject.Symbol.Print(ConsoleColor.DarkGreen);
                         break;
                     case '#':  // Wall
-                        OnTileObject.Symbol.Print(ConsoleColor.DarkGray);
+                        OnTileObject.Symbol.Print(ConsoleColor.DarkYellow);
                         break;
-                    case 'I':  // Potion
+                    case '♥':  // Potion
                         OnTileObject.Symbol.Print(ConsoleColor.Magenta);
                         break;
-                    case 'G':  // Gold
+                    case '◎':  // Gold
                         OnTileObject.Symbol.Print(ConsoleColor.Yellow);
                         break;
-                    case 'D':  // Dungeon
-                        OnTileObject.Symbol.Print(ConsoleColor.DarkRed);
+                    case '▥':  // Dungeon
+                        OnTileObject.Symbol.Print(ConsoleColor.Red);
                         break;
                     default:
                         OnTileObject.Symbol.Print();
@@ -58,7 +58,7 @@ namespace Game
             // 아니면 빈칸 ' ' 출력
             else
             {
-                ' '.Print();
+                '·'.Print();
             }
         }
     }

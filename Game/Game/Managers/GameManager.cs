@@ -9,7 +9,7 @@ namespace Game
     public class GameManager
     {
         public static bool IsGameOver { get; set; }
-        public const string GameName = "RPG";
+        public const string GameName = "Dungeon Life";
         private PlayerCharacter _player;
 
         public void Run()

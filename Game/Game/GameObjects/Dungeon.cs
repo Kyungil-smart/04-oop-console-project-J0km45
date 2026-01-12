@@ -12,7 +12,7 @@ namespace Game
 
         private void Init()
         {
-            Symbol = 'D';
+            Symbol = '▥';
         }
 
         public void Interact(PlayerCharacter player)

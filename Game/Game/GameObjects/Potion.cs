@@ -12,7 +12,7 @@ namespace Game
 
         private void Init()
         {
-            Symbol = 'I';
+            Symbol = '♥';
         }
 
         public override void Use()
