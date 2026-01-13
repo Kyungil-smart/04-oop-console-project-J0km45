@@ -11,7 +11,7 @@ namespace Game
         public ObservableProperty<int> Health = new ObservableProperty<int>(5); // 체력
         public ObservableProperty<int> Gold = new ObservableProperty<int>(0);  // 골드
         private string _healthGauge; // 체력 게이지
-        private string _goldText;
+        private string _goldText; // 골드
 
         public Tile[,] Field { get; set; } // 플레이어가 있는 맵
         private Inventory _inventory; // 플레이어 인벤토리
@@ -65,11 +65,6 @@ namespace Game
             {
                 // 현재 선택된 아이템의 Use() 실행
                 _inventory.Select();
-            }
-
-            if (InputManager.GetKey(ConsoleKey.T)) // 수정예정
-            {
-                Health.Value--; // 체력 감소 
             }
         }
 
@@ -179,7 +174,7 @@ namespace Game
             Health.Value += value;
         }
 
-        public void AddGold(int gold)
+        public void AddGold(int gold) // 골드 획득
         {
             Gold.Value += gold;
         }

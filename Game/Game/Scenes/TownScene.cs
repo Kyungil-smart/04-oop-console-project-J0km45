@@ -131,12 +131,14 @@ namespace Game
         // 테두리 벽 설정
         private void SetWalls()
         {
+            // 가로
             for(int x = 0; x < _field.GetLength(1); x++)
             {
                 _field[0, x].OnTileObject = new Wall();
                 _field[_field.GetLength(0) - 1, x].OnTileObject = new Wall();
             }
 
+            // 세로
             for(int y = 0; y < _field.GetLength(0); y++)
             {
                 _field[y, 0].OnTileObject = new Wall();

@@ -18,8 +18,7 @@ namespace Game
             ConsoleKey.RightArrow,
             ConsoleKey.Enter,
             ConsoleKey.I,
-            ConsoleKey.L,
-            ConsoleKey.T
+            ConsoleKey.L
         };
 
         // 현재 입력키 확인용
